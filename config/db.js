@@ -6,7 +6,7 @@ var connection = mysql.createConnection(process.env.JAWSDB_URL || {
   host: 'localhost',
   user: 'root',
   password: 'awesome',
-  database: 'trivia'
+  database: 'travel'
 })
 
 connection.connect(function(err) {
@@ -18,4 +18,3 @@ connection.connect(function(err) {
 });
 
 module.exports = connection;
-j
