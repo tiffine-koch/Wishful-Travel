@@ -1,0 +1,82 @@
+<div class="progress">
+    <div class="indeterminate"></div>
+</div>
+<div class="row">
+    <form class="col s12" name='destForm' autocomplete='off'>
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" class="name" ng-model='dest.name' name='name' minlength='10' required ng-class='{invalidInput: destForm.name.$invalid && destForm.name.$touched}'>
+          <label for="icon_prefix">Destination Name</label>
+          <!-- <div ng-messages="destForm.name.$error" role="alert">
+            <div ng-message="required">
+              <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+              Please enter a value for this field.
+            </div>
+          </div> -->
+        </div>
+
+        <div class="input-field col s6">
+          <i class="material-icons prefix">phone</i>
+          <input id="icon_telephone" type="tel" class="validate" ng-pattern="phoneRegex" ng-model='dest.loc' name='phone'ng-class='{invalidInput: destForm.loc.$invalid && destForm.loc.$touched}'>
+          <label for="icon_telephone">Location</label>
+          <!-- <div ng-messages="destForm.phone.$error" role="alert">
+            <div ng-message="pattern">
+              <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+              Please enter a valid phone number.
+            </div>
+        </div> -->
+      </div>
+  </div>
+   <div class="row">
+     <div class="input-field col s12">
+         <input type="text" class="validate" ng-model='user.activity1' ng-pattern="passwordRegex" name='activity1' ng-class='{invalidInput: destForm.activity1.$invalid && destForm.activity1.$touched}'>
+         <label for="first_name">First Activity</label>
+         <!-- <div ng-messages="destForm.activity1.$error" role="alert">
+           <div ng-message="pattern">
+             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+             Please enter a valid activity.
+           </div>
+         </div> -->
+       </div>
+     <div class="input-field col s12">
+         <input type="text" class="validate" ng-model='user.activity2' ng-pattern="passwordRegex" name='activity2' ng-class='{invalidInput: destForm.activity2.$invalid && destForm.activity1.$touched}'>
+         <label for="first_name">Second Activity</label>
+         <!-- <div ng-messages="destForm.activity2.$error" role="alert">
+           <div ng-message="pattern">
+             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+             Please enter a valid activity.
+           </div>
+         </div> -->
+       </div>
+     <div class="input-field col s12">
+         <input type="text" class="validate" ng-model='user.activity3' ng-pattern="passwordRegex" name='activity1' ng-class='{invalidInput: destForm.activity3.$invalid && destForm.activity1.$touched}'>
+         <label for="first_name">Third Activity</label>
+         <!-- <div ng-messages="destForm.activity3.$error" role="alert">
+           <div ng-message="pattern">
+             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+             Please enter a valid activity.
+           </div>
+         </div> -->
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s12">
+         <i class="material-icons prefix">mode_edit</i>
+         <input type="text" class="note" ng-model="user.credit" name="note" ng-pattern="ccRegex" required>
+         <label for="cc">Travel Blog</label>
+         <!-- <div ng-messages="destForm.note.$error" role="alert">
+           <div ng-message="required">
+             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+             Please enter a value for this field.
+           </div>
+           <div ng-message="pattern">
+             <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+             Input invalid.
+           </div>
+         </div> -->
+       </div>
+     </div>
+
+     <button type='submit' class="btn-floating btn-large red"><i class="large material-icons" ng-click="submitUserForm()">android</i></button>
+     <p id='pText'>Click me to submit!</p>
