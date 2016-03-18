@@ -13,9 +13,8 @@
 
     <div class="row">
       <div class="input-field col s12">
-        <!-- <i class="material-icons prefix">loyalty</i> -->
         <i class="material-icons prefix">loyalty</i>
-        <input id="icon_prefix" type="text" class="name" ng-model='dest.name' name='name' minlength='10' required ng-class='{invalidInput: destForm.name.$invalid && destForm.name.$touched}'>
+        <input id="icon_prefix" type="text" class="name" ng-model='dest.name' name='name' required ng-class='{invalidInput: destForm.name.$invalid && destForm.name.$touched}'>
         <label for="icon_prefix">Destination Name</label>
         <!-- <div ng-messages="destForm.name.$error" role="alert">
           <div ng-message="required">
@@ -26,8 +25,8 @@
       </div>
     </div>
     <div class="row">
-      <div class="input-field col s12">
-        <input id="icon_telephone" type="tel" class="validate" ng-pattern="phoneRegex" ng-model='dest.loc' name='phone'ng-class='{invalidInput: destForm.loc.$invalid && destForm.loc.$touched}'>
+      <div class="input-field col s4">
+        <input id="icon_telephone" type="text" class="validate" ng-pattern="phoneRegex" ng-model='dest.loc' name='phone'ng-class='{invalidInput: destForm.loc.$invalid && destForm.loc.$touched}'>
         <label for="icon_telephone">Location</label>
         <!-- <div ng-messages="destForm.phone.$error" role="alert">
           <div ng-message="pattern">
@@ -36,7 +35,15 @@
           </div>
       </div> -->
       </div>
-  </div>
+      <div class="input-field col s4">
+        <input id="first_name" type="text" class="validate" ng-model="dest.image">
+        <label for="">Image URL</label>
+      </div>
+      <div class="input-field col s4">
+        <input type="date" class="" ng-model="dest.date">
+        <label for=""></label>
+      </div>
+    </div>
    <div class="row">
      <div class="input-field col s12">
          <input type="text" class="validate" ng-model='dest.activity1' ng-pattern="passwordRegex" name='activity1' ng-class='{invalidInput: destForm.activity1.$invalid && destForm.activity1.$touched}'>
@@ -73,7 +80,7 @@
      <div class="row">
        <div class="input-field col s12">
          <i class="material-icons prefix">mode_edit</i>
-         <input type="text" class="note" ng-model="dest.note" name="note" ng-pattern="ccRegex" required>
+         <input type="text" class="note" ng-model="blog.note" name="note" ng-pattern="ccRegex" required>
          <label for="cc">Travel Blog</label>
          <!-- <div ng-messages="destForm.note.$error" role="alert">
            <div ng-message="required">
@@ -88,5 +95,5 @@
        </div>
      </div>
 
-     <button type='submit' class="btn-floating btn-large red"><i class="fa fa-plane" ng-click="submitUserForm()"></i></button>
+     <button type='submit' class="btn-floating btn-large red"><i class="fa fa-plane" ng-click="submitEntryForm()"></i></button>
      <p id='pText'>Submit!</p>
