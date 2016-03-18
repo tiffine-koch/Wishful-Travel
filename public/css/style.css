@@ -1,8 +1,30 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
 }
 
 a {
   color: #00B7FF;
+}
+
+#writeHead {
+  margin-top: 70px;
+}
+
+#writingPic {
+  max-width: 450px;
+}
+#destHead {
+  margin-top: 70px;
+}
+
+#destPic {
+  max-width: 450px;
+  max-height: 240px;
+}
+
+#formPic {
+  /*max-width: 450px;*/
+  border: solid 2px black;
+  max-width: 300px;
 }
