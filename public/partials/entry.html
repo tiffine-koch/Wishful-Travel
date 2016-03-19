@@ -38,7 +38,7 @@
         <label for="">Image URL</label>
       </div>
       <div class="input-field col s4">
-        <input type="text" class="" ng-model="dest.date" placeholder="YYYY-DD-MM" required>
+        <input type="number" class="" ng-model="dest.date" placeholder="YYYY-DD-MM" required>
         <label for="">Date</label>
       </div>
       <!-- <div class="input-field col s4">
@@ -91,7 +91,7 @@
          </div> -->
        </div>
      </div>
-     <button type='submit' class="btn-floating btn-large red"><i class="fa fa-plane" ng-click="submitEntryForm()"></i></button>
+     <a type='button' class="btn-floating btn-large red"><i class="fa fa-plane" ng-click="submitEntryForm()" ng-href='#/destinations'></i></a>
      <p id='pText'>Submit!</p>
    </form>
  </div>
