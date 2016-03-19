@@ -31,7 +31,7 @@ router.put('/', function(req, res) {
   var activity2 = req.body.activity2;
   var activity3 = req.body.activity3;
   var category = 'custom';
-  db.query('UPDATE places SET name=?, loc=?, image=?, activity1=?, activity2=?, activity3=?, category=? WHERE id=?',
+  db.query('UPDATE dest SET name=?, loc=?, image=?, activity1=?, activity2=?, activity3=?, category=? WHERE id=?',
           [id, name, loc, image, activity1, activity2, activity3, category], function(err, result) {
     if(err) return res.status(400).send(err);
     res.send(result);
