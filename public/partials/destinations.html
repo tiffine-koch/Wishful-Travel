@@ -20,28 +20,34 @@
       <div class="card">
         <div class="card-image">
           <img id="pics" ng-src="{{dest.image}}" />
-          <span class="card-title">{{dest.date | date}}</span>
+          <span class="card-title"></span>
         </div>
         <div class="card-content">
-           {{dest.name}}
+           <div>{{dest.name}}</div>
+           <div>{{dest.loc}}</div>
         </div>
 
         <div class="card-action">
-          <p class="rating">Take Action
-            <button ng-click="showDetails(dest)" type="button" class="btn-floating green"><i class="small material-icons left">description</i></button>
-            <button ng-click="showDetails(dest)" type="button" class="btn-floating blue"><i class="small material-icons left">open_with</i></button>
-            <a type="button" class="btn-floating yellow darken-1" ng-href='#/entry'>
-              <i class="tiny material-icons">mode_edit</i>
-            </a>
-            <button ng-click="deleteDest(dest)" type="button" class="btn-floating red"><i class="small material-icons left">not_interested</i></button>
-          </p>
+          <span class="card-title activator grey-text text-darken-4">
+          <button ng-click="showDetails(dest)" type="button" class="btn-floating green"><i class="small material-icons left">description</i></button>
+          <a type="button" class="btn-floating yellow darken-1" ng-href='#/entry'>
+            <i class="tiny material-icons">mode_edit</i>
+          </a>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Adventures<i class="material-icons right">code</i></span>
+          <p>{{dest.activity1}}</p>
+          <p>{{dest.activity2}}</p>
+          <p>{{dest.activity3}}</p>
+          <button ng-click="showDetails(dest)" type="button" class="btn-floating blue"><i class="small material-icons left">open_with</i>Go To Blog</button>
+          <button ng-click="deleteDest(dest)" type="button" class="btn-floating red"><i class="small material-icons left">not_interested</i>Delete Me</button>
         </div>
       </div>
     </div>
   </div>
 
   <div class="row">
-    <div class="card col s3">
+    <div class="card col s4">
         <div class="card-image">
           <img src="/img/place.jpeg" alt="">
           <div class='answerBox1'ng-click="selected(answer)"></div>
@@ -66,7 +72,7 @@
         <button ng-click="deleteDest(dest)" type="button" class="btn-floating red"><i class="small material-icons left">not_interested</i>Delete Me</button>
       </div>
     </div>
-    <div class="card col s3">
+    <div class="card col s4">
         <div class="card-image">
           <img src="/img/place.jpeg" alt="">
           <div class='answerBox1'ng-click="selected(answer)"></div>
@@ -86,7 +92,7 @@
         <p>{{script.show1}}</p>
       </div>
     </div>
-    <div class="card col s3">
+    <div class="card col s4">
         <div class="card-image">
           <img src="/img/place.jpeg" alt="">
           <div class='answerBox1'ng-click="selected(answer)"></div>
@@ -106,27 +112,6 @@
         <p>{{script.show1}}</p>
       </div>
     </div>
-    <div class="card col s3">
-        <div class="card-image">
-          <img src="/img/place.jpeg" alt="">
-          <div class='answerBox1'ng-click="selected(answer)"></div>
-        <span class="card-title">{{script.answer1}}</span>
-      </div>
-      <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">
-        <a class="btn-floating red" ng-click="getSelection(script)"><i class="material-icons">android</i></a>
-        <a type="button" class="btn-floating yellow darken-1" class='modalButton' class='btn modal-trigger' href='#demoModal' enable-tabs="true" modal ng-click="editUpload()">
-          <i class="tiny material-icons">mode_edit</i>
-        </a>
-      </div>
-      <div class="card-action">
-      </div>
-      <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">Details<i class="material-icons right">code</i></span>
-        <p>{{script.show1}}</p>
-      </div>
-    </div>
-
 
   </div>
 </div>

@@ -9,4 +9,18 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="input-field col s12 m12">
+      <input type="text" class="filterLine" ng-model="filterText">
+      <label for="">Search</label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div id="destList" class="col s12 m12" ng-repeat='blog in blogs | filter: filterText track by $index'>
+    <p id="date">{{blog.date | date}}</p>
+    <p id="blog">{{blog.blog}}</p>
+    </div>
+  </div>
+
 </div>

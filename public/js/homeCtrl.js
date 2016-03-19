@@ -11,12 +11,20 @@ app.controller('destCtrl', function($scope, $http, $state, $stateParams) {
     $scope.destinations= response.data;
   }, function(error){
     console.log('error');
-});
+  });
   console.log('destCtrl');
-
 });
 
 app.controller('singleCtrl', function($scope, $http, $state, $stateParams) {
   console.log('singleCtrl');
 
+  $http({
+  method: "GET",
+  url: "/single"
+  }).then(function(response){
+    $scope.blogs= response.data;
+  }, function(error){
+    console.log('error');
+  });
+  console.log('destCtrl');
 });
