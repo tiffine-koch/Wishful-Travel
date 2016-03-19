@@ -20,7 +20,7 @@ app.controller('destCtrl', function($scope, $http, $state, $stateParams) {
     var deleted = $scope.destinations.splice(index, 1);
     $http({
       method: 'DELETE',
-      url: `/destinations/${id}, dest`
+      url: `/destinations/${id}`
     })
     .then(function(data) {
       console.log('success');
