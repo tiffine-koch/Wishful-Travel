@@ -6,48 +6,37 @@ app.controller('entryCtrl', function($scope, $http, $state, $stateParams) {
   console.log('entryCtrl');
 
   $scope.submitEntryForm = function() {
-  // $scope.submitEntryForm = function(formInvalid) {
-  //   console.log('hehehe');
-  //   if(formInvalid) {
-  //     console.log('form invalid');
-  //     swal("Your form is invalid");
-  //     $scope.user = {};
-  //   } else {
-  //     console.log('submit:', $scope.user);
-  //     $scope.addUser();
-  //     $scope.user = {};
-  //   }
-  // };
-  addDest();
-  }
-
-  // $scope.addDest = function() {
- function addDest() {
-  $scope.destinations = [];
-  $scope.blogs = [];
-  var dest = $scope.dest;
-  var blog = $scope.blog;
-
-  console.log(dest);
-  console.log(blog);
-  $scope.destinations.push(dest);
-  $scope.blogs.push(blog);
-  console.log($scope.destinations);
-  console.log($scope.blogs);
-  $http({
-    method: 'POST',
-    url: '/entry',
-    data: {
-      dest: dest,
-      blog: blog
+    var dest = {
+      name: $scope.dest.name,
+      loc: $scope.dest.loc,
+      image: $scope.dest.image,
+      // date: $scope.dest.date,
+      date: "2016-08-04",
+      activity1: $scope.dest.activity1,
+      activity2: $scope.dest.activity2,
+      activity3: $scope.dest.activity3,
+      category: 'custom'
+    };
+    var blog = {
+      blog: $scope.blog.note,
+      category: 'custom'
+    }
+    //
+    console.log('desc', dest);
+    $http({
+      method: 'POST',
+      url: '/entry',
+      data: {
+        dest: dest,
+        blog: blog
       }
-    }).then(function(response){
-      swal("Your destination has been uploaded!");
-    }, function(error){
-      console.error(err);
-    })
-    $scope.user = {};
-  };
+      }).then(function(response){
+        swal("Your destination has been uploaded!");
+      }, function(err){
+        console.error(err);
+      })
+      $scope.user = {};
+    };
 });
 
 app.controller('splashCtrl', function($scope, $http, $state, $stateParams) {

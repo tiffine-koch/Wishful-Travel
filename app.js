@@ -3,6 +3,7 @@ var path = require('path');
 var uuid = require('uuid');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
+var moment = require('moment');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
