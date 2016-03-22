@@ -14,24 +14,12 @@
         <i class="material-icons prefix">loyalty</i>
         <input id="icon_prefix" type="text" name="name" ng-model='dest.name' name='name' required ng-class='{invalidInput: destForm.name.$invalid && destForm.name.$touched}' minlength='1'>
         <label for="icon_prefix">Destination Name</label>
-        <!-- <div ng-messages="destForm.name.$error" role="alert">
-          <div ng-message="required">
-            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-            Please enter a destination name.
-          </div>
-        </div> -->
       </div>
     </div>
     <div class="row">
       <div class="input-field col s4">
         <input id="icon_telephone" type="text" class="validate" ng-model='dest.loc' name='loc' ng-class='{invalidInput: destForm.loc.$invalid && destForm.loc.$touched}' required>
         <label for="">Location</label>
-        <!-- <div ng-messages="destForm.loc.$error" role="alert">
-          <div ng-message="required">
-            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-            Please enter a valid location.
-          </div>
-      </div> -->
       </div>
       <div class="input-field col s4">
         <input type="text" class="validate" ng-model="dest.image" required>
@@ -41,41 +29,19 @@
         <input type="number" class="" ng-model="dest.date" placeholder="YYYY-DD-MM" required>
         <label for="">Date</label>
       </div>
-      <!-- <div class="input-field col s4">
-        <input type="date" class="" ng-model="dest.date" required>
-        <label for=""></label>
-      </div> -->
     </div>
    <div class="row">
      <div class="input-field col s12">
          <input type="text" class="validate" name='activity1' ng-model='dest.activity1' name='activity1' ng-class='{invalidInput: destForm.activity1.$invalid && destForm.activity1.$touched}' required>
          <label for="">First Activity</label>
-         <!-- <div ng-messages="destForm.activity1.$error" role="alert">
-           <div ng-message="required">
-             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-             Please enter an activity.
-           </div>
-         </div> -->
        </div>
      <div class="input-field col s12">
          <input type="text" class="validate" ng-model='dest.activity2' required name='activity2' ng-class='{invalidInput: destForm.activity2.$invalid && destForm.activity2.$touched}'>
          <label for="first_name">Second Activity</label>
-         <!-- <div ng-messages="destForm.activity2.$error" role="alert">
-           <div ng-message="required">
-             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-             Please enter an activity.
-           </div>
-         </div> -->
        </div>
      <div class="input-field col s12">
          <input type="text" class="validate" ng-model='dest.activity3' name='activity3' ng-class='{invalidInput: destForm.activity3.$invalid && destForm.activity3.$touched}' required>
          <label for="first_name">Third Activity</label>
-         <!-- <div ng-messages="destForm.activity3.$error" role="alert">
-           <div ng-message="required">
-             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-             Please enter an activity.
-           </div>
-         </div> -->
        </div>
      </div>
      <div class="row">
@@ -83,17 +49,9 @@
          <i class="material-icons prefix">mode_edit</i>
          <input type="text" class="note" ng-model="blog.note" name="note" required>
          <label for="cc">Travel Blog</label>
-         <!-- <div ng-messages="destForm.note.$error" role="alert">
-           <div ng-message="required">
-             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-             Please enter in a blog entry.
-           </div>
-         </div> -->
        </div>
      </div>
-     <a type='button' class="btn-floating btn-large red"><i class="fa fa-plane" ng-click="submitEntryForm()" ng-href='#/destinations'></i></a>
+     <a type='button' class="btn-floating btn-large red"><i class="fa fa-plane" ng-click="submitEntryForm()" ui-sref='destinations'></i></a>
      <p id='pText'>Submit!</p>
    </form>
  </div>
-     <!-- <pre>{{dest | json}}</pre>
-     <pre>{{blog | json}}</pre> -->
